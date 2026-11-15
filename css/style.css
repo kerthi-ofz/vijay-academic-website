@@ -1,0 +1,727 @@
+/* ==========================================================================
+   Academic Website Theme - Replicated from Weizmann Institute (Prof. David Peleg)
+   Strict Color Palette & Typography Match:
+   - Primary Accent / Links / Footer: #13807e (Teal)
+   - Secondary / Header / Active: #1979a2 (Steel Blue)
+   - Content H2 Headers: #12739e
+   - Text color: #333333
+   - Block Highlight: #eeeded with 4px #13807e bottom border
+   - Font Family: "Proxima Nova", Arial, Helvetica, "Nimbus Sans L", sans-serif
+   ========================================================================== */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Proxima Nova", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-size: 93.75%; /* 15px base */
+  line-height: 1.5;
+  color: #333333;
+  background-color: #ffffff;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Links */
+a {
+  color: #13807e;
+  text-decoration: underline;
+  transition: color 0.15s ease-in-out;
+}
+
+a:hover, a:focus {
+  color: #1979a2;
+}
+
+/* Page Container (Max 990px centered) */
+#page {
+  max-width: 990px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #ffffff;
+}
+
+/* ==========================================================================
+   Header Section (Variation 4 with Custom Banner Overlay)
+   ========================================================================== */
+#header {
+  position: relative;
+  width: 100%;
+  max-width: 990px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+#header img.header__image {
+  width: 100%;
+  max-width: 990px;
+  height: 285px;
+  display: block;
+  object-fit: cover;
+  background-color: #0b2545;
+}
+
+/* Institutional Logo & Dept Link in Header */
+.wis-logo-container {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 2;
+  width: auto;
+  max-width: 80%;
+}
+
+.wis-logo-container a.header__logo-wis {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 0.35em;
+}
+
+.wis-logo-container img.header__logo-wis-image {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
+.wis-logo-container a.dept-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.2px;
+}
+
+.wis-logo-container a.dept-link:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* Site Name & Slogan Container */
+.title-container {
+  position: absolute;
+  bottom: 2em;
+  left: 0;
+  padding: 10px 25px;
+  z-index: 2;
+  width: 100%;
+}
+
+.title-container #site-name {
+  color: #ffffff;
+  margin: 0;
+}
+
+.title-container #site-name a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.title-container #site-name h1 {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.15;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  display: inline-block;
+}
+
+.title-container #site-slogan {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.3em;
+  font-weight: 400;
+  margin-top: 6px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile Header Banner */
+.mobile-header-banner {
+  display: none;
+}
+
+/* Mobile Navbar Toggle */
+.navbar-header {
+  display: none;
+  background-color: #13807e;
+  padding: 10px 15px;
+  color: #ffffff;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-navbar-toggle {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.main-navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.navbar-header span.menu-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#mobile-nav-container {
+  display: none;
+  background-color: #ffffff;
+  border-bottom: 2px solid #13807e;
+}
+
+#mobile-nav-container.open {
+  display: block;
+}
+
+#mobile-nav-container ul.menu {
+  list-style: none;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+#mobile-nav-container ul.menu li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+#mobile-nav-container ul.menu li a {
+  color: #13807e;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#mobile-nav-container ul.menu li a.active {
+  color: #1979a2;
+}
+
+/* ==========================================================================
+   Main Content Layout (3-Column Desktop Grid)
+   ========================================================================== */
+#main {
+  max-width: 990px;
+  margin: 30px auto 0;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Breadcrumbs */
+.region-breadcrumbs-area {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.breadcrumb {
+  font-size: 13.5px;
+  color: #666666;
+}
+
+.breadcrumb ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.breadcrumb li {
+  display: inline;
+}
+
+.breadcrumb a {
+  color: #13807e;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+  color: #1979a2;
+}
+
+/* Left Sidebar (Navigation) */
+aside.sidebar-first,
+.region-sidebar-first {
+  width: 18%;
+  flex-shrink: 0;
+}
+
+.region-sidebar-first .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.region-sidebar-first .menu > li {
+  margin: 0 0 6px 0;
+  position: relative;
+}
+
+.region-sidebar-first .menu > li > a {
+  color: #13807e;
+  text-decoration: none;
+  font-size: 15.5px;
+  padding: 5px 0 5px 16px;
+  display: block;
+  position: relative;
+  font-weight: 500;
+  line-height: 1.35;
+  transition: all 0.15s ease-in-out;
+}
+
+.region-sidebar-first .menu > li > a:before {
+  content: "▸";
+  color: #999999;
+  position: absolute;
+  left: 0;
+  font-size: 11px;
+  top: 7px;
+}
+
+.region-sidebar-first .menu > li > a:hover {
+  color: #1979a2;
+  text-decoration: none;
+}
+
+.region-sidebar-first .menu > li > a.active,
+.region-sidebar-first .menu > li.active-trail > a {
+  color: #1979a2;
+  font-weight: 700;
+}
+
+.region-sidebar-first .menu > li > a.active:before,
+.region-sidebar-first .menu > li.active-trail > a:before {
+  color: #1979a2;
+}
+
+/* Center Content Column */
+#content {
+  flex-grow: 1;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+/* For two-sidebars layout (Home page) */
+.two-sidebars #content {
+  width: 58%;
+  padding: 0 10px;
+}
+
+/* For single sidebar layout (Subpages) */
+.sidebar-first-only #content {
+  width: 78%;
+  padding-left: 10px;
+}
+
+/* Center Column Typography */
+h1.page__title {
+  font-size: 26px;
+  color: #1979a2;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-bottom: 2px solid #eeeded;
+  padding-bottom: 8px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #12739e;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 16px;
+  color: #1979a2;
+  font-weight: 600;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+p {
+  line-height: 21px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+ul.list, ol.list {
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+ul.list li, ol.list li {
+  line-height: 22px;
+  margin-bottom: 8px;
+  color: #333333;
+}
+
+/* Highlight / Callout block matching Weizmann research activities */
+.views-row-highlight {
+  background-color: #eeeded;
+  border-bottom: 4px #13807e solid;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.views-row-highlight h3 {
+  margin-top: 0;
+  color: #1979a2;
+}
+
+.views-row-highlight p:last-child {
+  margin-bottom: 0;
+}
+
+/* Publication and CV specific items */
+.cv-section-block {
+  margin-bottom: 25px;
+}
+
+.cv-entry {
+  display: flex;
+  margin-bottom: 18px;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.cv-entry .cv-date {
+  width: 130px;
+  flex-shrink: 0;
+  font-weight: 700;
+  color: #1979a2;
+  font-size: 14.5px;
+}
+
+.cv-entry .cv-details {
+  flex-grow: 1;
+}
+
+.cv-entry .cv-title {
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 3px;
+}
+
+.cv-entry .cv-inst {
+  color: #555555;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.cv-entry .cv-desc {
+  font-size: 14px;
+  line-height: 1.45;
+  color: #444444;
+}
+
+/* Numbered Publications list */
+ol.pub-list {
+  padding-left: 24px;
+  margin-bottom: 22px;
+}
+
+ol.pub-list li {
+  line-height: 23px;
+  margin-bottom: 12px;
+  padding-left: 6px;
+  color: #333333;
+}
+
+ol.pub-list li em {
+  font-style: italic;
+  color: #111111;
+}
+
+ol.pub-list li strong {
+  color: #111111;
+}
+
+/* Right Sidebar (PI Photo & Details Block) */
+aside.sidebar-second,
+.region-sidebar-second {
+  width: 20%;
+  flex-shrink: 0;
+}
+
+#block-wis-lab-theme-elements-pi-block {
+  background-color: #ffffff;
+}
+
+.pi_photo {
+  margin-bottom: 14px;
+}
+
+.pi_photo_img {
+  width: 100%;
+  max-width: 185px;
+  height: auto;
+  display: block;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.pi_about {
+  font-size: 13.5px;
+  line-height: 1.4em;
+  color: #333333;
+}
+
+.pi_about h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1979a2;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.pi_about p {
+  font-size: 13.5px;
+  line-height: 1.4em;
+  margin-top: 0;
+  margin-bottom: 7px;
+  color: #444444;
+}
+
+.pi_about a {
+  color: #13807e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pi_about a:hover {
+  text-decoration: underline;
+  color: #1979a2;
+}
+
+.pi_about .btn-vidwan {
+  display: inline-block;
+  background-color: #13807e;
+  color: #ffffff !important;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none !important;
+  margin-top: 6px;
+}
+
+.pi_about .btn-vidwan:hover {
+  background-color: #1979a2;
+}
+
+/* Contact Links on Contact Page */
+.contact-card {
+  background: #fdfdfd;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #13807e;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.contactus-links {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.contactus-links a {
+  display: inline-block;
+  background-color: #eeeded;
+  color: #13807e;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 13.5px;
+  border: 1px solid #d5d5d5;
+}
+
+.contactus-links a:hover {
+  background-color: #13807e;
+  color: #ffffff;
+  border-color: #13807e;
+}
+
+/* ==========================================================================
+   Footer Section
+   ========================================================================== */
+#footer,
+.region-footer {
+  max-width: 990px;
+  width: 100%;
+  margin: 40px auto 0;
+  background-color: #13807e;
+  color: #ffffff;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13.5px;
+}
+
+.region-mobile-footer {
+  display: none;
+}
+
+.footer_left p,
+.footer_right p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.footer_left a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer_left a:hover {
+  color: #e0f2f1;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints matching Weizmann Theme
+   ========================================================================== */
+@media (max-width: 869px) {
+  #main {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  
+  aside.sidebar-first,
+  .region-sidebar-first {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .region-sidebar-first .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    border-bottom: 1px solid #eeeded;
+    padding-bottom: 15px;
+  }
+  
+  .two-sidebars #content,
+  .sidebar-first-only #content {
+    width: 100%;
+    padding: 0;
+  }
+  
+  aside.sidebar-second,
+  .region-sidebar-second {
+    width: 100%;
+    margin-top: 25px;
+    border-top: 1px solid #eeeded;
+    padding-top: 20px;
+  }
+  
+  .pi_photo_img {
+    max-width: 150px;
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 625px) {
+  .navbar-header {
+    display: flex;
+  }
+  
+  #header img.header__image {
+    display: none;
+  }
+  
+  .mobile-header-banner {
+    display: block;
+    width: 100%;
+  }
+  
+  .mobile-header-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .wis-logo-container {
+    position: static;
+    padding: 12px 15px;
+    background-color: #12739e;
+    max-width: 100%;
+  }
+  
+  .wis-logo-container img.header__logo-wis-image {
+    max-width: 240px;
+  }
+  
+  .title-container {
+    position: static;
+    background: #0e4c68;
+    padding: 15px;
+  }
+  
+  .title-container #site-name h1 {
+    font-size: 26px;
+  }
+  
+  .title-container #site-slogan {
+    font-size: 15px;
+  }
+  
+  aside.sidebar-first {
+    display: none; /* Managed by mobile nav */
+  }
+  
+  .cv-entry {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .cv-entry .cv-date {
+    width: 100%;
+  }
+  
+  #footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 15px;
+  }
+}

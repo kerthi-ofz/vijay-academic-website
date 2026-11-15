@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 50" width="420" height="50">
+  <!-- Crest Icon -->
+  <g fill="#ffffff">
+    <path d="M12 6 C12 6, 24 2, 36 6 C36 18, 30 32, 24 38 C18 32, 12 18, 12 6 Z" fill="none" stroke="#ffffff" stroke-width="2.2"/>
+    <path d="M24 10 L24 32 M17 19 L31 19" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="24" cy="19" r="2.5" fill="#ffffff"/>
+  </g>
+  <!-- Text Section -->
+  <text x="46" y="20" fill="#ffffff" font-family="'Proxima Nova', Arial, sans-serif" font-size="14.5" font-weight="700" letter-spacing="0.5">CPAT-TVS CENTRAL LIBRARY</text>
+  <text x="46" y="34" fill="#ffffff" opacity="0.9" font-family="'Proxima Nova', Arial, sans-serif" font-size="10.5" font-weight="400" letter-spacing="0.2">T S Srinivasan Centre for Polytechnic &amp; Advanced Training</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 280" width="240" height="280">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12739e"/>
+      <stop offset="100%" stop-color="#13807e"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="280" fill="url(#bgGrad)"/>
+  <circle cx="120" cy="95" r="48" fill="#ffffff" opacity="0.95"/>
+  <path d="M45 250 C45 180, 75 165, 120 165 C165 165, 195 180, 195 250 Z" fill="#ffffff" opacity="0.95"/>
+  <circle cx="120" cy="92" r="40" fill="#e9ecef"/>
+  <path d="M52 250 C52 188, 80 175, 120 175 C160 175, 188 188, 188 250 Z" fill="#e9ecef"/>
+  <text x="120" y="103" text-anchor="middle" fill="#12739e" font-family="'Proxima Nova', Arial, sans-serif" font-size="28" font-weight="700">VK</text>
+  <rect x="0" y="245" width="240" height="35" fill="rgba(0,0,0,0.25)"/>
+  <text x="120" y="267" text-anchor="middle" fill="#ffffff" font-family="'Proxima Nova', Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="0.5">VIJAYA KUMAR R</text>
+</svg>

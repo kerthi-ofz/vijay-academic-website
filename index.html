@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="Academic webpage of Vijaya Kumar R - Librarian, Information Scientist, and Digital Strategist." />
+  <title>Vijaya Kumar R | Academic Homepage</title>
+  <link rel="shortcut icon" href="images/profile.svg" type="image/svg+xml" />
+  <style>
+    /* ==========================================================================
+       Academic Website Theme - Replicated from Weizmann Institute (Prof. David Peleg)
+       Color Palette:
+       - Primary Accent / Links / Footer: #13807e
+       - Secondary / Headers / Active: #1979a2
+       - Subheading Accent: #12739e
+       - Highlight Card: #eeeded with 4px #13807e solid bottom border
+       - Text Color: #333333
+       - Font Family: "Proxima Nova", Arial, Helvetica, "Nimbus Sans L", sans-serif
+       ========================================================================== */
+
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-family: "Proxima Nova", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+      font-size: 93.75%; /* 15px base */
+      line-height: 1.5;
+      color: #333333;
+      background-color: #f7f9fa;
+      scroll-behavior: smooth;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fa;
+      color: #333333;
+    }
+
+    a {
+      color: #13807e;
+      text-decoration: underline;
+      transition: color 0.15s ease-in-out;
+    }
+
+    a:hover, a:focus {
+      color: #1979a2;
+    }
+
+    #page {
+      max-width: 990px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      background-color: #ffffff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.06);
+    }
+
+    /* ==========================================================================
+       Header Banner Section (Cleaned: TVS Logo & Dept text removed; Just Name)
+       ========================================================================== */
+    #header {
+      position: relative;
+      width: 100%;
+      max-width: 990px;
+      background-color: #0b2545;
+      overflow: hidden;
+    }
+
+    #header img.header__image {
+      width: 100%;
+      max-width: 990px;
+      height: 260px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .title-container {
+      position: absolute;
+      bottom: 2em;
+      left: 0;
+      padding: 10px 30px;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .title-container #site-name {
+      margin: 0;
+    }
+
+    .title-container #site-name a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .title-container #site-name h1 {
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      margin: 0;
+      line-height: 1.15;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+      display: inline-block;
+    }
+
+    .title-container #site-slogan {
+      color: #ffffff;
+      font-size: 20px;
+      line-height: 1.3em;
+      font-weight: 400;
+      margin-top: 5px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      letter-spacing: 0.3px;
+    }
+
+    .mobile-header-banner {
+      display: none;
+    }
+
+    /* Mobile Navbar Header */
+    .navbar-header {
+      display: none;
+      background-color: #13807e;
+      padding: 10px 15px;
+      color: #ffffff;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .main-navbar-toggle {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 4px;
+      padding: 6px 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .main-navbar-toggle .icon-bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: #ffffff;
+    }
+
+    .navbar-header span.menu-text {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    #mobile-nav-container {
+      display: none;
+      background-color: #ffffff;
+      border-bottom: 2px solid #13807e;
+    }
+
+    #mobile-nav-container.open {
+      display: block;
+    }
+
+    #mobile-nav-container ul.menu {
+      list-style: none;
+      padding: 10px 20px;
+      margin: 0;
+    }
+
+    #mobile-nav-container ul.menu li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    #mobile-nav-container ul.menu li a {
+      color: #13807e;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      display: block;
+    }
+
+    #mobile-nav-container ul.menu li a.active {
+      color: #1979a2;
+    }
+
+    /* ==========================================================================
+       Main 3-Column Layout
+       ========================================================================== */
+    #main {
+      max-width: 990px;
+      margin: 25px auto 0;
+      padding: 0 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    /* Left Sidebar: Sticky Navigation */
+    aside.sidebar-first {
+      width: 19%;
+      flex-shrink: 0;
+      position: sticky;
+      top: 20px;
+    }
+
+    .region-sidebar-first .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .region-sidebar-first .menu > li {
+      margin: 0 0 5px 0;
+      position: relative;
+    }
+
+    .region-sidebar-first .menu > li > a {
+      color: #13807e;
+      text-decoration: none;
+      font-size: 14.5px;
+      padding: 6px 0 6px 16px;
+      display: block;
+      position: relative;
+      font-weight: 500;
+      line-height: 1.35;
+      transition: all 0.15s ease-in-out;
+      border-radius: 2px;
+    }
+
+    .region-sidebar-first .menu > li > a:before {
+      content: "▸";
+      color: #999999;
+      position: absolute;
+      left: 0;
+      font-size: 11px;
+      top: 8px;
+    }
+
+    .region-sidebar-first .menu > li > a:hover {
+      color: #1979a2;
+      text-decoration: none;
+      background-color: #f2f8f8;
+    }
+
+    .region-sidebar-first .menu > li > a.active {
+      color: #1979a2;
+      font-weight: 700;
+      background-color: #ebf5f7;
+    }
+
+    .region-sidebar-first .menu > li > a.active:before {
+      color: #1979a2;
+    }
+
+    /* Center Content Column */
+    #content {
+      width: 57%;
+      flex-grow: 1;
+      min-width: 0;
+      padding: 0 10px;
+    }
+
+    .content-section {
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .content-section:last-child {
+      border-bottom: none;
+    }
+
+    /* Section Headings */
+    h2.section-header {
+      font-size: 21px;
+      color: #1979a2;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 16px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #13807e;
+      letter-spacing: -0.2px;
+    }
+
+    h3.sub-header {
+      font-size: 17.5px;
+      color: #12739e;
+      font-weight: 600;
+      margin-top: 22px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 22px;
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #333333;
+    }
+
+    ul.list, ol.list {
+      padding-left: 20px;
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    ul.list li, ol.list li {
+      line-height: 22px;
+      margin-bottom: 8px;
+      color: #333333;
+    }
+
+    /* Highlight Block */
+    .views-row-highlight {
+      background-color: #eeeded;
+      border-bottom: 4px #13807e solid;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+
+    .views-row-highlight h4 {
+      margin-top: 0;
+      margin-bottom: 6px;
+      color: #1979a2;
+      font-size: 16px;
+    }
+
+    .views-row-highlight p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Timeline CV Entries */
+    .cv-entry {
+      display: flex;
+      margin-bottom: 16px;
+      align-items: baseline;
+      gap: 15px;
+    }
+
+    .cv-entry .cv-date {
+      width: 125px;
+      flex-shrink: 0;
+      font-weight: 700;
+      color: #1979a2;
+      font-size: 14px;
+    }
+
+    .cv-entry .cv-details {
+      flex-grow: 1;
+    }
+
+    .cv-entry .cv-title {
+      font-weight: 700;
+      color: #222222;
+      margin-bottom: 3px;
+    }
+
+    .cv-entry .cv-inst {
+      color: #555555;
+      font-size: 13.5px;
+      margin-bottom: 4px;
+    }
+
+    .cv-entry .cv-desc {
+      font-size: 13.5px;
+      line-height: 1.45;
+      color: #444444;
+    }
+
+    /* Technical Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .skill-card {
+      background: #fafbfc;
+      border: 1px solid #e2e8f0;
+      border-left: 3.5px solid #13807e;
+      padding: 12px 14px;
+      border-radius: 3px;
+    }
+
+    .skill-card h4 {
+      margin: 0 0 6px 0;
+      color: #1979a2;
+      font-size: 14.5px;
+      font-weight: 700;
+    }
+
+    .skill-card p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #444444;
+    }
+
+    /* Publications List */
+    ol.pub-list {
+      padding-left: 24px;
+      margin-bottom: 20px;
+    }
+
+    ol.pub-list li {
+      line-height: 23px;
+      margin-bottom: 12px;
+      padding-left: 6px;
+      color: #333333;
+    }
+
+    ol.pub-list li em {
+      font-style: italic;
+      color: #111111;
+    }
+
+    ol.pub-list li strong {
+      color: #111111;
+    }
+
+    /* Contact Cards */
+    .contact-card {
+      background: #fafafa;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #13807e;
+      padding: 16px 20px;
+      margin-bottom: 18px;
+      border-radius: 2px;
+    }
+
+    .contactus-links {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .contactus-links a {
+      display: inline-block;
+      background-color: #eeeded;
+      color: #13807e;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 3px;
+      font-weight: 600;
+      font-size: 13.5px;
+      border: 1px solid #d5d5d5;
+      transition: all 0.15s ease;
+    }
+
+    .contactus-links a:hover {
+      background-color: #13807e;
+      color: #ffffff;
+      border-color: #13807e;
+    }
+
+    /* Right Sidebar: Scholar Profile Card */
+    aside.sidebar-second {
+      width: 21%;
+      flex-shrink: 0;
+      position: sticky;
+      top: 20px;
+    }
+
+    #block-wis-lab-theme-elements-pi-block {
+      background-color: #ffffff;
+    }
+
+    .pi_photo {
+      margin-bottom: 14px;
+    }
+
+    .pi_photo_img {
+      width: 100%;
+      max-width: 185px;
+      height: auto;
+      display: block;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+    }
+
+    .pi_about {
+      font-size: 13.5px;
+      line-height: 1.4em;
+      color: #333333;
+    }
+
+    .pi_about h3 {
+      font-size: 16px;
+      font-weight: bold;
+      color: #1979a2;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .pi_about p {
+      font-size: 13.5px;
+      line-height: 1.4em;
+      margin-top: 0;
+      margin-bottom: 7px;
+      color: #444444;
+    }
+
+    .pi_about a {
+      color: #13807e;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .pi_about a:hover {
+      text-decoration: underline;
+      color: #1979a2;
+    }
+
+    .pi_about .btn-vidwan {
+      display: inline-block;
+      background-color: #13807e;
+      color: #ffffff !important;
+      padding: 5px 12px;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none !important;
+      margin-top: 6px;
+      transition: background 0.15s ease;
+    }
+
+    .pi_about .btn-vidwan:hover {
+      background-color: #1979a2;
+    }
+
+    /* Footer */
+    #footer {
+      max-width: 990px;
+      width: 100%;
+      margin: 40px auto 0;
+      background-color: #13807e;
+      color: #ffffff;
+      padding: 12px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13.5px;
+    }
+
+    .footer_left p,
+    .footer_right p {
+      margin: 0;
+      color: #ffffff;
+    }
+
+    .footer_left a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 869px) {
+      #main {
+        flex-direction: column;
+        padding: 0 15px;
+      }
+
+      aside.sidebar-first {
+        width: 100%;
+        position: static;
+        margin-bottom: 15px;
+      }
+
+      .region-sidebar-first .menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 14px;
+        border-bottom: 1px solid #eeeded;
+        padding-bottom: 12px;
+      }
+
+      #content {
+        width: 100%;
+        padding: 0;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      aside.sidebar-second {
+        width: 100%;
+        position: static;
+        margin-top: 25px;
+        border-top: 1px solid #eeeded;
+        padding-top: 20px;
+      }
+
+      .pi_photo_img {
+        max-width: 150px;
+        float: left;
+        margin-right: 20px;
+      }
+    }
+
+    @media (max-width: 625px) {
+      .navbar-header {
+        display: flex;
+      }
+
+      #header img.header__image {
+        display: none;
+      }
+
+      .mobile-header-banner {
+        display: block;
+        width: 100%;
+      }
+
+      .mobile-header-banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .title-container {
+        position: static;
+        background: #0e4c68;
+        padding: 18px 15px;
+      }
+
+      .title-container #site-name h1 {
+        font-size: 28px;
+      }
+
+      aside.sidebar-first {
+        display: none;
+      }
+
+      .cv-entry {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .cv-entry .cv-date {
+        width: 100%;
+      }
+
+      #footer {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body class="html front not-logged-in two-sidebars header-4">
+
+<div id="page">
+
+  <!-- Mobile Navbar Header -->
+  <div class="navbar-header">
+    <span class="menu-text">Menu</span>
+    <button class="main-navbar-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Collapsible Navigation -->
+  <div id="mobile-nav-container">
+    <ul class="menu">
+      <li><a href="#about" class="mobile-nav-link active">About</a></li>
+      <li><a href="#education" class="mobile-nav-link">Education</a></li>
+      <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Technical Skills</a></li>
+      <li><a href="#activities" class="mobile-nav-link">Professional Activities</a></li>
+      <li><a href="#training" class="mobile-nav-link">Professional Training</a></li>
+      <li><a href="#publications" class="mobile-nav-link">Publications</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Academic Header Banner: Cleaned (No TVS logo / No dept content, just the Scholar Name) -->
+  <header class="header" id="header" role="banner">
+    <img src="images/header_banner.jpg" alt="Academic Header Banner" class="header__image" />
+
+    <div class="title-container">
+      <div class="header__name-and-slogan" id="name-and-slogan">
+        <div class="header__site-name" id="site-name">
+          <a href="#about" title="Vijaya Kumar R" class="header__site-link" rel="home">
+            <h1>Vijaya Kumar R</h1>
+          </a>
+        </div>
+        <div class="header__site-slogan" id="site-slogan">Librarian</div>
+      </div>
+    </div>
+
+    <div class="mobile-header-banner">
+      <img src="images/header_mobile.jpg" alt="Vijaya Kumar R" />
+    </div>
+  </header>
+
+  <!-- Main Body Layout (3 Columns: Sticky Nav | Main Content | PI Profile) -->
+  <div id="main" class="two-sidebars">
+
+    <!-- Left Sidebar: Sticky Navigation Menu in Requested Order -->
+    <aside class="sidebar sidebar-first" role="navigation">
+      <div class="region region-sidebar-first column sidebar" id="navigation">
+        <div id="block-system-main-menu" class="block block-system block-menu">
+          <ul class="menu">
+            <li><a href="#about" class="nav-link active">About</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#skills" class="nav-link">Technical Skills</a></li>
+            <li><a href="#activities" class="nav-link">Professional Activities</a></li>
+            <li><a href="#training" class="nav-link">Professional Training</a></li>
+            <li><a href="#publications" class="nav-link">Publications</a></li>
+            <li><a href="#contact" class="nav-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Center Column: Content Structured Strictly to Your Specified Sequence -->
+    <div id="content" class="column" role="main">
+
+      <!-- ================= 1. ABOUT SECTION ================= -->
+      <section id="about" class="content-section">
+        <h2 class="section-header">About</h2>
+        <p>
+          I am a passionate Library and Information Science professional and Digital Strategist currently serving as 
+          <strong>Librarian &amp; Social Media and Public Relations</strong> at 
+          <strong>T S Srinivasan Centre for Polytechnic and Advanced Training (CPAT-TVS)</strong>, Chennai. 
+          I oversee comprehensive library and information resources catering to industry professionals, faculty, and students, 
+          leading library automation, digital preservation, and institutional knowledge infrastructures.
+        </p>
+        <p>
+          In an additional capacity as <strong>Digital Strategist and Social Media Manager</strong>, I steer institutional digital communications, 
+          web documentation, and public engagement. I also serve as <strong>Coordinator for the Centre for Creativity and Innovation (CCI)</strong>, 
+          driving student talent discovery drives, interdisciplinary innovation projects, and active industry-academia collaborations.
+        </p>
+
+        <h3 class="sub-header">Areas of Interest</h3>
+        <ul class="list">
+          <li><strong>Information Retrieval:</strong> Automated search, metadata engineering, and discovery systems.</li>
+          <li><strong>Open Science &amp; Open Access:</strong> Research data management, open-source repositories, and digital access equity.</li>
+          <li><strong>Knowledge Graphs &amp; Ontologies:</strong> Semantic linked data, academic entity profiling, and scientometrics.</li>
+          <li><strong>Digital Libraries &amp; Automation:</strong> Full-stack integration of Koha ILS, DSpace, E-Prints, and Moodle LMS with cloud infrastructures.</li>
+          <li><strong>Knowledge Economy:</strong> Intellectual property rights (IPR), copyright compliance, and institutional memory governance.</li>
+        </ul>
+
+        <div class="views-row-highlight">
+          <h4>Research &amp; Innovation Focus</h4>
+          <p>
+            Currently pursuing doctoral research (<strong>Ph.D. in Library and Information Science</strong>) specializing in 
+            <em>Digital Libraries</em> at Kalasalingam Academy of Research and Education. Concurrently pursuing a 
+            <strong>Master of Business Administration (MBA) in Technology Management</strong> at the College of Engineering, Guindy (CEG) Campus, Anna University.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= 2. EDUCATION SECTION ================= -->
+      <section id="education" class="content-section">
+        <h2 class="section-header">Education</h2>
+
+        <div class="cv-section-block">
+          <div class="cv-entry">
+            <div class="cv-date">2026 (Pursuing)</div>
+            <div class="cv-details">
+              <div class="cv-title">Doctor of Philosophy (Ph.D.) in Library and Information Science</div>
+              <div class="cv-inst">Kalasalingam Academy of Research and Education, Krishnankoil, Tamil Nadu</div>
+              <div class="cv-desc"><strong>Area of Specialization:</strong> Digital Library Systems and Architectures</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2026 – 2028</div>
+            <div class="cv-details">
+              <div class="cv-title">Master of Business Administration (MBA) in Technology Management (Pursuing)</div>
+              <div class="cv-inst">Centre for Distance Education (CDE), Anna University, Chennai, Tamil Nadu</div>
+              <div class="cv-desc"><strong>Institute:</strong> College of Engineering, Guindy (CEG) Campus</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2025</div>
+            <div class="cv-details">
+              <div class="cv-title">Post Graduate Diploma in Computer Applications (PGDCA)</div>
+              <div class="cv-inst">Directorate of Distance and Continuing Education (DDE), Manonmaniam Sundaranar University, Tirunelveli</div>
+              <div class="cv-desc"><em>Result Awaiting</em></div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2022</div>
+            <div class="cv-details">
+              <div class="cv-title">Master of Library and Information Science (M.Lib.I.Sc) – 81% (First Class with Distinction)</div>
+              <div class="cv-inst">Central University of Tamil Nadu (CUTN), Thiruvarur, Tamil Nadu</div>
+              <div class="cv-desc">
+                <strong>Dissertation Title:</strong> <em>Design and Develop a Mobile Application for Central Library</em><br />
+                <strong>Internship:</strong> Professional Trainee, Central Library, National Institute of Technology, Puducherry (NITPY)
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2020</div>
+            <div class="cv-details">
+              <div class="cv-title">Bachelor of Commerce in Computer Application (B.Com CA) – 58.16%</div>
+              <div class="cv-inst">Madurai Kamaraj University (MKU), Madurai, Tamil Nadu</div>
+              <div class="cv-desc"><strong>Institute:</strong> V.H.N. Senthikumara Nadar College (Autonomous), Virudhunagar</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2015 &amp; 2017</div>
+            <div class="cv-details">
+              <div class="cv-title">Schooling (SSLC: 70% &amp; HSC: 70%)</div>
+              <div class="cv-inst">N S Higher Secondary School, Theni, Tamil Nadu</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 3. EXPERIENCE SECTION ================= -->
+      <section id="experience" class="content-section">
+        <h2 class="section-header">Experience</h2>
+
+        <div class="cv-section-block">
+          <div class="cv-entry">
+            <div class="cv-date">Aug 2025 – Present</div>
+            <div class="cv-details">
+              <div class="cv-title">Librarian &amp; Social Media and Public Relations</div>
+              <div class="cv-inst">T S Srinivasan Centre for Polytechnic and Advanced Training (CPAT-TVS), Chennai</div>
+              <div class="cv-desc">
+                • Head of the Library and Information Center at CPAT-TVS (Autonomous, Sponsored by TVS Group); oversee comprehensive library services catering to industry professionals, faculty, and students.<br />
+                • Various internal and external event coordination for industry partnerships.<br />
+                • In an additional capacity as <strong>Social Media Manager and Digital Strategist</strong>.<br />
+                • <strong>Coordinator – Centre for Creativity and Innovation:</strong> Coordinating external events, student talent discovery programs, projects, and communication.
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">July 2024 – July 2025</div>
+            <div class="cv-details">
+              <div class="cv-title">Library cum Information Assistant – LRC Coordinator</div>
+              <div class="cv-inst">Rashtriya Raksha University (Ministry of Home Affairs), Puducherry Campus</div>
+              <div class="cv-desc">
+                • <strong>Founder Librarian</strong> of Learning Resource Centre (LRC) at RRU Puducherry Campus.<br />
+                • Initiated major services, library policies, digital infrastructure, LMS, and innovative practices.<br />
+                • Research support and specialized information retrieval. Worked across diverse academic, training, and research events.<br />
+                • <strong>Courses Taught:</strong> Awareness, Soft skills, corporate readiness, and technical documentation.
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Feb 2023 – July 2024</div>
+            <div class="cv-details">
+              <div class="cv-title">Library Assistant</div>
+              <div class="cv-inst">Indian Maritime University (Ministry of Ports, Shipping &amp; Waterways), Chennai</div>
+              <div class="cv-desc">
+                • In Charge for Reference and Information Service.<br />
+                • Maintaining and updating Institutional Repository (DSpace), Koha LMS, IRINS, Shodh-Chakra, and Moodle LMS.<br />
+                • Research support services for management students and research scholars, plagiarism verification, Current Awareness Services (CAS), Document Delivery Service (DDS).<br />
+                • Acquisition and technical processing. Maintenance of E-Library Portal. Conducting training and user orientation programmes.
+              </div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">June 2022 – Feb 2023</div>
+            <div class="cv-details">
+              <div class="cv-title">Technical Assistant &amp; Digital Library In-Charge (Short Term Project)</div>
+              <div class="cv-inst">Hindustan Institute of Technology and Science (Deemed to be University), Chennai</div>
+              <div class="cv-desc">
+                • In Charge for Digital Library Section and MAC Lab; setup MAC Lab Digital Library and implemented institutional repository.<br />
+                • Procurement of E-Resources, file management, maintaining and updating Institutional Repository (DSpace) &amp; Koha LMS.<br />
+                • Research support services, plagiarism analysis, DDS, CMS software maintenance, and training orientation programmes.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 4. TECHNICAL SKILLS SECTION ================= -->
+      <section id="skills" class="content-section">
+        <h2 class="section-header">Technical Skills</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h4>Library Automation &amp; LMS</h4>
+            <p>Koha Integrated Library System (ILS), Koha LMS customization, OPAC management, circulation rules, MARC21 cataloging, barcode &amp; RFID tracking.</p>
+          </div>
+
+          <div class="skill-card">
+            <h4>Digital Repositories &amp; Archives</h4>
+            <p>DSpace Institutional Repository, E-Prints, Digital Library Portals, digital preservation workflows, metadata harvesting (OAI-PMH), Dublin Core.</p>
+          </div>
+
+          <div class="skill-card">
+            <h4>Research Support &amp; Profiling</h4>
+            <p>IRINS Faculty Profiling, Shodh-Chakra, Shodhganga, scientometric analysis, citation indexing, Turnitin, Urkund, plagiarism detection protocols.</p>
+          </div>
+
+          <div class="skill-card">
+            <h4>E-Learning &amp; Cloud Tools</h4>
+            <p>Moodle LMS deployment, Cloud-based SaaS applications for libraries, Google Workspace for education, blog-based academic documentation.</p>
+          </div>
+
+          <div class="skill-card">
+            <h4>IT, Systems &amp; Storage</h4>
+            <p>MAC Lab setup and administration, Network Attached Storage (NAS) implementation, content management system (CMS) maintenance, hardware diagnostics.</p>
+          </div>
+
+          <div class="skill-card">
+            <h4>Web, Coding &amp; Media</h4>
+            <p>HTML, CSS, Web Portal Development, Blocks Coding (Chiti Labs), editor &amp; developer of <em>V-Zine E-Magazine</em>, social media strategy and digital marketing.</p>
+          </div>
+        </div>
+
+        <h3 class="sub-header">Core Professional Competencies</h3>
+        <ul class="list">
+          <li><strong>Public Oratory &amp; Communication:</strong> Seasoned speaker, trainer, and technical reporter for academic symposiums.</li>
+          <li><strong>Project &amp; Event Management:</strong> Coordinating university events, student talent discovery drives, and inter-institutional initiatives.</li>
+          <li><strong>Office Suites &amp; Automation:</strong> Advanced spreadsheet analytics, automated document delivery workflows, and institutional reporting.</li>
+          <li><strong>User Engagement &amp; Instruction:</strong> Faculty orientation, student information literacy programs, and documentation standards.</li>
+        </ul>
+      </section>
+
+      <!-- ================= 5. PROFESSIONAL ACTIVITIES SECTION ================= -->
+      <section id="activities" class="content-section">
+        <h2 class="section-header">Professional Activities</h2>
+
+        <h3 class="sub-header">Events &amp; Programmes Organized</h3>
+        <ul class="list">
+          <li>
+            <strong>Institute Representative (IR) &amp; Exam Observer:</strong> NPTEL &amp; BS Degree Program, Indian Institute of Technology Madras (IIT Madras) — Overseeing conduct of centre-based nationwide examinations (2025 – Present).
+          </li>
+          <li>
+            <strong>Coordinator – Centre for Creativity and Innovation (CCI):</strong> CPAT TVS, Chennai — Coordinating external events, student talent finding programs, innovation projects, and institutional communications.
+          </li>
+          <li>
+            <strong>Co-Convener – Mission Karmayogi Puducherry Police:</strong> Transformative capacity-building initiative empowering police personnel with essential digital knowledge, skills, and citizen-first attitudes.
+          </li>
+          <li>
+            <strong>Organizing Committee Member:</strong> Organized diverse training programmes in active collaboration with <em>Mission Karmayogi</em>, <em>Indian Cybercrime Coordination Centre (I4C)</em>, Puducherry Police Department, and Ministry of Women &amp; Child Development (WCD).
+          </li>
+          <li>
+            <strong>Special Lectures:</strong> Delivered invited lectures on intellectual property and copyrights during <em>World Book and Copyrights Day</em>.
+          </li>
+          <li>
+            <strong>Organizing Committee Member:</strong> <em>ZINE19</em> Inter-Collegiate Conference at V.H.N. Senthikumara Nadar College (Autonomous).
+          </li>
+          <li>
+            <strong>Editor &amp; Web Developer:</strong> Designed, developed, and managed the <em>V-Zine E-Magazine</em> platform at V.H.N.S.N. College (Autonomous), Virudhunagar.
+          </li>
+        </ul>
+
+        <h3 class="sub-header">Invited Talks &amp; Resource Person Sessions</h3>
+        <ul class="list">
+          <li>
+            <strong>Conference Reporter:</strong> Invited as Official Reporter at the <em>National Conference on Redefining Librarianship in the AI Technological Era: Innovations, Challenges and Opportunities (ReLAITE-2025)</em>, Central University of Tamil Nadu (CUTN).
+          </li>
+          <li>
+            <strong>Resource Person:</strong> Delivered technical session on <em>“ICT tools for marketing the library services”</em> in the Library Team Development Programme held on 24.12.2022 at D.D.G.D. Vaishnava College (Autonomous), Chennai.
+          </li>
+          <li>
+            <strong>Resource Person:</strong> Conducted expert session on <em>“Career Guidance and awareness on Indian government policies”</em> on 11.03.2021 at V.H.N. Senthikumara Nadar College (Autonomous), Virudhunagar.
+          </li>
+        </ul>
+
+        <h3 class="sub-header">Editorial &amp; Reviewer Appointments</h3>
+        <div class="views-row-highlight">
+          <h4>Scholarly Peer Reviewer</h4>
+          <ul class="list" style="margin-bottom: 0;">
+            <li><strong>Information Development</strong> — Sage Publications (Web of Science / Scopus)</li>
+            <li><strong>Information Discovery and Delivery</strong> — Emerald Publishing (Web of Science / Scopus)</li>
+          </ul>
+        </div>
+
+        <h3 class="sub-header">Field Engagements &amp; Academic Documentation</h3>
+        <ul class="list">
+          <li>
+            <strong>IDEATHON National Submission:</strong> Participated and submitted research paper in IDEATHON, Information and Library Network Centre (INFLIBNET Centre - IUC of UGC), Gujarat.
+          </li>
+          <li>
+            <strong>Campus Web &amp; Event Platforms:</strong> Implemented blog-based academic documentation infrastructure and event websites at Rashtriya Raksha University (RRU) Puducherry Campus.
+          </li>
+          <li>
+            <strong>National Library Study:</strong> Undertook benchmark study visits to prominent university libraries across India to evaluate administrative frameworks and digital infrastructure innovations.
+          </li>
+        </ul>
+      </section>
+
+      <!-- ================= 6. PROFESSIONAL TRAINING SECTION ================= -->
+      <section id="training" class="content-section">
+        <h2 class="section-header">Professional Training &amp; Certifications</h2>
+
+        <div class="cv-section-block">
+          <div class="cv-entry">
+            <div class="cv-date">October 2026</div>
+            <div class="cv-details">
+              <div class="cv-title">Economics of Intellectual Property Rights (IPR)</div>
+              <div class="cv-inst">National Programme on Technology Enhanced Learning (NPTEL)</div>
+              <div class="cv-desc">Advanced course covering patents, copyrights, trademarks, licensing models, and technology transfer policies.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">October 31, 2026</div>
+            <div class="cv-details">
+              <div class="cv-title">Future-Ready Academic Libraries: AI, Open Access, and Research Innovation</div>
+              <div class="cv-inst">Indian Institute of Management Bangalore (IIM Bangalore)</div>
+              <div class="cv-desc">High-level symposium examining AI integration, generative discovery tools, open access mandates, and scholarly data ecosystems.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Nov 8 – 31, 2025</div>
+            <div class="cv-details">
+              <div class="cv-title">Analog to Digital: The Transformation</div>
+              <div class="cv-inst">French Institute Pondicherry (IFP), Puducherry in collaboration with SALIS</div>
+              <div class="cv-desc">Intensive practical workshop focusing on manuscript scanning standards, metadata schemas, OCR processing, and long-term digital preservation.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Sept 8 – 12, 2025</div>
+            <div class="cv-details">
+              <div class="cv-title">FDP on Artificial Intelligence and Computer Vision</div>
+              <div class="cv-inst">Centre for Development of Advanced Computing (C-DAC), Hyderabad</div>
+              <div class="cv-desc">Faculty Development Programme exploring deep learning architectures, image recognition, neural networks, and automated visual indexing.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">April 28 – May 4, 2022</div>
+            <div class="cv-details">
+              <div class="cv-title">Administrative Training Programme</div>
+              <div class="cv-inst">Police Training School, Government of Puducherry</div>
+              <div class="cv-desc">Public administration, official documentation, protocol governance, and organizational management.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2022</div>
+            <div class="cv-details">
+              <div class="cv-title">Transforming Library Professionals with 21st Century Skills</div>
+              <div class="cv-inst">D.D.G.D. Vaishnava College (Autonomous), Chennai</div>
+              <div class="cv-desc">Advanced skill development in patron services, digital outreach, electronic resource management, and information marketing.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2021</div>
+            <div class="cv-details">
+              <div class="cv-title">Finishing School Course in Library and Information Science (LIS)</div>
+              <div class="cv-inst">Sambalpur University, Jyoti Vihar, Burla, Odisha</div>
+              <div class="cv-desc">Comprehensive technical training in modern classification, cataloging protocols (MARC21, RDA), and open-source database deployment.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2021</div>
+            <div class="cv-details">
+              <div class="cv-title">Building Digital Archives (British Library EAP Project 1300)</div>
+              <div class="cv-inst">School of Cultural Texts and Records (SCTR), Jadavpur University, Kolkata</div>
+              <div class="cv-desc">Funded by the British Library’s Endangered Archives Programme; hands-on archival digitization, metadata formatting, and manuscript conservation.</div>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">2021</div>
+            <div class="cv-details">
+              <div class="cv-title">Blocks Coding Certification</div>
+              <div class="cv-inst">Chiti Labs</div>
+              <div class="cv-desc">Computational thinking, algorithmic foundations, and visual code development.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 7. PUBLICATIONS SECTION ================= -->
+      <section id="publications" class="content-section">
+        <h2 class="section-header">Publications</h2>
+
+        <h3 class="sub-header">Refereed Journals</h3>
+        <ol class="pub-list">
+          <li>
+            Subaveerapandiyan, A., <strong>Vijay Kumar, R.</strong>, &amp; Prabhu, S. (2024). 
+            <em>Marine information-seeking behaviors and AI chatbot impact on information discovery</em>. 
+            In <strong>Information Discovery and Delivery</strong>, Emerald. 
+            <br />
+            <a href="https://doi.org/10.1108/idd-10-2023-0119" target="_blank" rel="noopener">https://doi.org/10.1108/idd-10-2023-0119</a>
+          </li>
+          <li>
+            Shivalaxmi Arumugham., <strong>Vijaya Kumar, R.</strong>, &amp; P. Ranjith Jeba Thangaiah (2026). 
+            <em>Mapping the Global Research Trends in Child Sexual Abuse Material (CSAM): A Scientometric Analysis</em>. 
+            <strong>DESIDOC Journal of Library and Information Technology</strong>. <em>(Submitted for review)</em>
+          </li>
+        </ol>
+
+        <h3 class="sub-header">Book Chapter</h3>
+        <ul class="list">
+          <li>
+            <strong>Vijaya Kumar, R.</strong> (2022). 
+            Developing an interactive digitized library platform using Google products. 
+            In Ramasamy and Mani (Eds.), <em>Free and Open Sources Software for Library and Information: A Software Toolkit</em>. 
+            <strong>ISBN: 978-81-951051-2-1</strong>.
+          </li>
+        </ul>
+
+        <h3 class="sub-header">Refereed Conference Publications</h3>
+        <ol class="pub-list">
+          <li>
+            <strong>Vijaya Kumar, R.</strong> &amp; Uday Kiran. 
+            <em>Cloud-based Application Software-as-a-Service (SaaS): Library Perspectives</em>. 
+            In <strong>National Conference on Redefining Librarianship in the AI Technological Era: Innovations, Challenges and Opportunities (ReLAITE-2025)</strong>, Central University of Tamil Nadu (CUTN).
+          </li>
+          <li>
+            Sindhu &amp; <strong>Vijaya Kumar, R.</strong> 
+            <em>A Study on Open Educational Resources (OER)</em>. 
+            In <strong>42nd National Conference on Technology, Education and Media for Academic and Public Library Empowerment (TEMPLE 2024)</strong>, organized by Sri Venkateswara University Library.
+          </li>
+          <li>
+            <strong>Vijaya Kumar, R.</strong> 
+            <em>Network Attached Storage for Academic Libraries</em>. 
+            In <strong>Innovative Librarianship: Accelerating of Open and Digital Convergence</strong>, pp. 53–58.
+          </li>
+        </ol>
+
+        <h3 class="sub-header">Dissertation &amp; Internship Reports</h3>
+        <ul class="list">
+          <li>
+            <strong>Master's Dissertation:</strong> <em>Design and Develop a Mobile Application for Central Library</em>, 
+            Department of Library and Information Science, Central University of Tamil Nadu (CUTN), Thiruvarur, 2022.
+          </li>
+          <li>
+            <strong>Professional Internship:</strong> Trainee, Central Library, National Institute of Technology, Puducherry (NITPY), 2022.
+          </li>
+        </ul>
+      </section>
+
+      <!-- ================= 8. CONTACT US SECTION ================= -->
+      <section id="contact" class="content-section">
+        <h2 class="section-header">Contact Us</h2>
+
+        <div class="contact-card">
+          <p>
+            <strong>Vijaya Kumar R</strong><br />
+            <strong>Central Library</strong><br />
+            T S Srinivasan Centre for Polytechnic and Advanced Training (CPAT-TVS)<br />
+            (Autonomous Institution, Sponsored by TVS Group)<br />
+            Chennai 600 095, Tamil Nadu, INDIA
+          </p>
+          <p>
+            <strong>Phone:</strong> +91 79048 92878<br />
+            <strong>Email:</strong> <a href="mailto:vjkumaran456@gmail.com">vjkumaran456@gmail.com</a>
+          </p>
+          <p>
+            <strong>Vidwan Profile:</strong> 
+            <a href="https://vidwan.inflibnet.ac.in/profile/639724" target="_blank" rel="noopener">https://vidwan.inflibnet.ac.in/profile/639724</a>
+          </p>
+        </div>
+
+        <h3 class="sub-header">Academic &amp; Professional References</h3>
+
+        <div class="cv-section-block">
+          <div class="contact-card">
+            <h4 style="margin-top: 0; margin-bottom: 5px; color: #1979a2;">Dr. Akhandanand Shukla</h4>
+            <p style="margin-bottom: 4px;">
+              <strong>Professor</strong><br />
+              Department of Library and Information Science (DLIS)<br />
+              Central University of Tamil Nadu (CUTN)<br />
+              Thiruvarur, Tamil Nadu, INDIA
+            </p>
+            <p style="margin-bottom: 0;">
+              <strong>Mobile:</strong> +91 97740 03221<br />
+              <strong>Email:</strong> <a href="mailto:akhandanandshukla@cutn.ac.in">akhandanandshukla@cutn.ac.in</a>
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <h4 style="margin-top: 0; margin-bottom: 5px; color: #1979a2;">Dr. Sanmati Jinendran Jain</h4>
+            <p style="margin-bottom: 4px;">
+              <strong>Central Library</strong><br />
+              National Institute of Technology (NIT Tiruchirappalli)<br />
+              Tiruchirappalli, Tamil Nadu, INDIA
+            </p>
+            <p style="margin-bottom: 0;">
+              <strong>Mobile:</strong> +91 95511 62576<br />
+              <strong>Email:</strong> <a href="mailto:sanmatijain@nitt.edu">sanmatijain@nitt.edu</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="contactus-links">
+          <a href="https://maps.google.com/?q=T+S+Srinivasan+Centre+for+Polytechnic+and+Advanced+Training+Chennai" target="_blank" rel="noopener">Campus Directions (Google Maps)</a>
+          <a href="https://vidwan.inflibnet.ac.in/profile/639724" target="_blank" rel="noopener">INFLIBNET Vidwan Profile</a>
+          <a href="mailto:vjkumaran456@gmail.com">Send Direct Email</a>
+        </div>
+      </section>
+
+    </div><!-- /#content -->
+
+    <!-- Right Sidebar: PI Scholar Profile Card -->
+    <aside class="sidebar sidebar-second" role="complementary">
+      <section class="region region-sidebar-second column sidebar">
+        <div id="block-wis-lab-theme-elements-pi-block" class="block block-wis-lab-theme-elements">
+          <div class="pi_photo">
+            <img class="pi_photo_img" src="images/profile.jpg" alt="Vijaya Kumar R" title="Vijaya Kumar R" />
+          </div>
+          <div class="pi_about">
+            <h3>Vijaya Kumar R</h3>
+            <p><strong>Librarian, Central Library</strong></p>
+            <p>
+              T S Srinivasan Centre for Polytechnic and Advanced Training (CPAT-TVS)<br />
+              (Autonomous, Sponsored by TVS Group)<br />
+              Chennai 600 095, INDIA
+            </p>
+            <p>
+              <span>Tel:</span> +91 79048 92878<br />
+              <span>Email:</span> <a href="mailto:vjkumaran456@gmail.com">vjkumaran456@gmail.com</a>
+            </p>
+            <p>
+              <a href="https://vidwan.inflibnet.ac.in/profile/639724" target="_blank" class="btn-vidwan">Vidwan Profile #639724</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+  </div><!-- /#main -->
+
+  <!-- Academic Footer -->
+  <footer class="region region-footer" id="footer" role="contentinfo">
+    <div class="footer_left">
+      <p>Contact: <a href="mailto:vjkumaran456@gmail.com">vjkumaran456@gmail.com</a></p>
+    </div>
+    <div class="footer_right">
+      <p>Updated: 15 November 2026</p>
+    </div>
+  </footer>
+
+</div><!-- /#page -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Mobile navigation toggle
+    var toggleBtn = document.querySelector('.main-navbar-toggle');
+    var mobileNav = document.getElementById('mobile-nav-container');
+
+    if (toggleBtn && mobileNav) {
+      toggleBtn.addEventListener('click', function () {
+        mobileNav.classList.toggle('open');
+        var isExpanded = mobileNav.classList.contains('open');
+        toggleBtn.setAttribute('aria-expanded', isExpanded);
+      });
+    }
+
+    // Close mobile nav when clicking a link
+    var mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    mobileLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (mobileNav) {
+          mobileNav.classList.remove('open');
+        }
+      });
+    });
+
+    // Scrollspy to highlight active sidebar link as user scrolls
+    var sections = document.querySelectorAll('section.content-section');
+    var navLinks = document.querySelectorAll('aside.sidebar-first .menu a.nav-link');
+
+    window.addEventListener('scroll', function () {
+      var current = '';
+      var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+      sections.forEach(function (section) {
+        var sectionTop = section.offsetTop - 120;
+        var sectionHeight = section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(function (link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
